@@ -42,24 +42,26 @@ print("3) *")
 print("4) /")
 choice = input()
 
+operator = None
+
 ##
 #   Using functions
 ##
 
-if choice == '1':
-   result = summa(x, y) 
-   print("x + y = " + str(result))
+if choice == '1' or choice == '+':
+    operator = '+'
+    result = summa(x, y) 
 
-
-if choice == '2':
+if choice == '2' or choice == '-':
+    operator = '-'
     result = deduction(x, y)
-    print("x - y = " + str(result))
 
-if choice == '3':
+if choice == '3' or choice == '*':
+    operator = '*'
     result = multiplication(x, y)
-    print("x * y = " + str(result))
 
-
-if choice == '4':
+if choice == '4' or choice == '/':
+    operator = '/'
     result = division(x, y)
-    print("x / y = " + str(result))
+
+print("x " + operator + " y = " + str(result))

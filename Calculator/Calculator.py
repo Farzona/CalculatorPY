@@ -27,6 +27,9 @@ def division(a, b):
         result = a / b
     return result
 
+def square(a,b):
+    return a * a 
+
 choice = None
 result = None
 
@@ -51,6 +54,7 @@ while choice != '0':
     print("2) -")
     print("3) *")
     print("4) /")
+    print("5) sqr")
     choice = input()
 
 
@@ -75,6 +79,10 @@ while choice != '0':
     if choice == '4' or choice == '/':
         operator = '/'
         result = division(x, y)
+
+    if choice == '5'or choice == '*':
+        operator = '*'
+        result = square(x,x)
 
     if operator == None or result == None:
         print('Are you sure? [Yes|No]')

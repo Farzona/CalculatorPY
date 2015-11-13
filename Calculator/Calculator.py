@@ -1,6 +1,14 @@
 ##
 #  Functions
 ##
+def convertable_to_int(a):
+    try:
+        int(a)
+        return True
+    except:
+        return False
+
+
 def summa(a, b):
     return a + b 
 
@@ -23,13 +31,19 @@ choice = None
 result = None
 
 while choice != '0':
-    print("Enter x : ")
-    x = input()
-    x = int(x)
-
-    print("Enter y : ")
-    y = input()
-    y = int(y)
+    x = None
+    while type (x).__name__ != 'int':
+        print("Enter x : ")
+        x = input()
+        if convertable_to_int(x) == True:
+            x = int(x)
+        
+    y = None 
+    while type (y).__name__ != 'int':
+        print("Enter y : ")
+        y = input()
+        if convertable_to_int(y) == True:
+            y = int(y) 
 
     print("Choose operator: ")
     print("0) exit")

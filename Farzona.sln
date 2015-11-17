@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Calculator", "Calculator\Calculator.pyproj", "{9B76BE0F-95BD-4E13-BDDD-F3207712E01E}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LibraryApp", "LibraryApp\LibraryApp.pyproj", "{C54C2DF1-D70E-42B6-B592-90E373A0E898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9B76BE0F-95BD-4E13-BDDD-F3207712E01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B76BE0F-95BD-4E13-BDDD-F3207712E01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54C2DF1-D70E-42B6-B592-90E373A0E898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54C2DF1-D70E-42B6-B592-90E373A0E898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

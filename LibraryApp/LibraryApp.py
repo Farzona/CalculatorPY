@@ -1,3 +1,36 @@
+choice = None
+
+print("==Library==")
+print(" Choose Action :")
+print("1) Add new book")
+print("2) Show book")
+choice = input()
+title = None
+author = None
+year = None
+
+if choice == '1':
+    print("==New book==")
+    print("Enter title:")
+    title = input()
+    print("Enter author:")
+    author = input()
+    print("Enter year: ")
+    year = input()
+    print("Do you want to add one more book? [Yes|No]")
+    want = input()
+   
+
+
+
+
+
+
+
+
+
+
+"""
 class Book:
      title = None
      author = None
@@ -31,3 +64,4 @@ bookOfTimur.year = 2014
 books.append(bookOfTimur)
 
 print("Nazvanie knigi Timura:" + bookOfFarzona.title + "Nazvanie avtora:" + bookOfFarzona.author)
+"""

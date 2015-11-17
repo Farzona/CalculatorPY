@@ -22,7 +22,16 @@ if choice == '1':
     print("Do you want to add one more book? [Yes|No]")
     want = input()
 elif  choice == '0':
-    print("Bye!!")
+        print('Are you sure? [Yes|No]')
+        sure = input() # sure => 'Y'
+        sure = sure.lower() # sure => 'y'
+
+        if sure == 'y' or sure == 'yes': # 'y' != 'Y'
+            print('Bye!!')
+        elif sure == 'n' or sure == 'no':
+            choice = '1'
+
+
 
 
 

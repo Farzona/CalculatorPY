@@ -2,8 +2,10 @@ choice = None
 
 print("==Library==")
 print(" Choose Action :")
+print("0) Exit")
 print("1) Add new book")
 print("2) Show book")
+
 choice = input()
 title = None
 author = None
@@ -19,7 +21,8 @@ if choice == '1':
     year = input()
     print("Do you want to add one more book? [Yes|No]")
     want = input()
-   
+elif  choice == '0':
+    print("Bye!!")
 
 
 

@@ -42,12 +42,7 @@ while choice != '0':
             x = int(x)
         
     y = None 
-    while type (y).__name__ != 'int':
-        print("Enter y : ")
-        y = input()
-        if convertable_to_int(y) == True:
-            y = int(y) 
-
+   c
     print("Choose operator: ")
     print("0) exit")
     print("1) +")

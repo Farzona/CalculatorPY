@@ -1,27 +1,50 @@
+def convertable_to_int(a):
+    try:
+        int(a)
+        return True
+    except:
+        return False
+
+
 choice = None
 
-print("==Library==")
-print(" Choose Action :")
-print("0) Exit")
-print("1) Add new book")
-print("2) Show book")
+while choice != '0':
+    print("== Library ==")
+    print("Choose Action :")
+    print("0) Exit")
+    print("1) Add new book")
+    print("2) Show book")
 
-choice = input()
-title = None
-author = None
-year = None
+    choice = input()
 
-if choice == '1':
-    print("==New book==")
-    print("Enter title:")
-    title = input()
-    print("Enter author:")
-    author = input()
-    print("Enter year: ")
-    year = input()
-    print("Do you want to add one more book? [Yes|No]")
-    want = input()
-elif  choice == '0':
+    title = None
+    author = None
+    year = None
+
+    if choice == '1':
+        more_book = None
+        
+        while more_book != 'no':
+            print("== New book ==")
+            print("Enter title:")
+            title = input()
+            print("Enter author:")
+            author = input()
+            
+            while type (year).__name__ != 'int':
+                print("Enter year: ")
+                year = input()
+                if convertable_to_int(year) == True:
+                    year = int(year)
+            
+        
+            print("Do you want to add one more book? [Yes|No]")
+            more_book = input()
+            more_book = more_book.lower()
+            if more_book == 'no' or more_book == 'n':
+                more_book = 'no'
+    
+    elif  choice == '0':
         print('Are you sure? [Yes|No]')
         sure = input() # sure => 'Y'
         sure = sure.lower() # sure => 'y'
@@ -29,7 +52,7 @@ elif  choice == '0':
         if sure == 'y' or sure == 'yes': # 'y' != 'Y'
             print('Bye!!')
         elif sure == 'n' or sure == 'no':
-            choice = '1'
+            choice = None
 
 
 

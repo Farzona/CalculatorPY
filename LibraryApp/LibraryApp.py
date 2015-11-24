@@ -4,6 +4,9 @@ class Book:
      year = None
 
 
+books = []
+
+
 def convertable_to_int(a):
     try:
         int(a)
@@ -85,7 +88,7 @@ while choice != '0':
 
 bookOfFarzona = Book()
 
-books = []
+
 
 title = input('Name of book: ')
 author = input('Author name: ')

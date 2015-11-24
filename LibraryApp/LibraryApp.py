@@ -56,6 +56,8 @@ while choice != '0':
                 more_book = 'no'
                 
             title = ''
+            author = ''
+            year = None
     
     elif  choice == '0':
         print('Are you sure? [Yes|No]')

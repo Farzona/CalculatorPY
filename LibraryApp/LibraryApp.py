@@ -1,3 +1,9 @@
+class Book:
+     title = None
+     author = None
+     year = None
+
+
 def convertable_to_int(a):
     try:
         int(a)
@@ -73,10 +79,7 @@ while choice != '0':
 
 
 """
-class Book:
-     title = None
-     author = None
-     year = None
+
 
 bookOfFarzona = Book()
 

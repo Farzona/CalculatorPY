@@ -17,8 +17,8 @@ while choice != '0':
 
     choice = input()
 
-    title = None
-    author = None
+    title = ''
+    author = ''
     year = None
 
     if choice == '1':
@@ -26,11 +26,14 @@ while choice != '0':
         
         while more_book != 'no':
             print("== New book ==")
-            print("Enter title:")
-            title = input()
-            print("Enter author:")
-            author = input()
-            
+            while title == '':
+                print("Enter title:")
+                title = input()
+                title = title.strip()
+            while author == '':
+               print("Enter author:")
+               author = input()
+               author  =  author.strip() 
             while type (year).__name__ != 'int':
                 print("Enter year: ")
                 year = input()
@@ -43,6 +46,8 @@ while choice != '0':
             more_book = more_book.lower()
             if more_book == 'no' or more_book == 'n':
                 more_book = 'no'
+                
+            title = ''
     
     elif  choice == '0':
         print('Are you sure? [Yes|No]')

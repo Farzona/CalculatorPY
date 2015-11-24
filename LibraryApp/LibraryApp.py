@@ -50,7 +50,13 @@ while choice != '0':
                 year = input()
                 if convertable_to_int(year) == True:
                     year = int(year)
-            
+
+            newBook = Book()
+            newBook.author = author
+            newBook.title = title
+            newBook.year = year            
+
+            books.append(newBook)
         
             print("Do you want to add one more book? [Yes|No]")
             more_book = input()

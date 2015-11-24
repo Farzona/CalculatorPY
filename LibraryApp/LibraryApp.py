@@ -29,11 +29,13 @@ while choice != '0':
             while title == '':
                 print("Enter title:")
                 title = input()
-                title = title.strip()
+                title = title.strip
+
             while author == '':
                print("Enter author:")
                author = input()
                author  =  author.strip() 
+
             while type (year).__name__ != 'int':
                 print("Enter year: ")
                 year = input()

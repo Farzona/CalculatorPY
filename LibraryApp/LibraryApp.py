@@ -67,6 +67,15 @@ while choice != '0':
             title = ''
             author = ''
             year = None
+
+    elif choice == '2': 
+         print("== Show book ==")
+         print("Choose Action :")
+         print("0) Exit")
+         print("1) Search by author")
+         print("2) Search by title")
+         print("3) Search by year")
+
     
     elif  choice == '0':
         print('Are you sure? [Yes|No]')
@@ -77,9 +86,6 @@ while choice != '0':
             print('Bye!!')
         elif sure == 'n' or sure == 'no':
             choice = None
-
-
-
 
 
 

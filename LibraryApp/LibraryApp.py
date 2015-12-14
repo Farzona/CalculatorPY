@@ -66,7 +66,6 @@ while choice != '0':
             title = ''
             author = ''
             year = None
-        choice = '-1'
              
 
 

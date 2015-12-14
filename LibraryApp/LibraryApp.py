@@ -23,6 +23,7 @@ while choice != '0':
     print("0) Exit")
     print("1) Add new book")
     print("2) Show book")
+    print("3) Books")
 
     choice = input()
 
@@ -37,7 +38,7 @@ while choice != '0':
             while title == '':
                 print("Enter title:")
                 title = input()
-                title = title.strip
+                title = title.strip()
 
             while author == '':
                print("Enter author:")
@@ -77,7 +78,18 @@ while choice != '0':
          print("2) Search by title")
          print("3) Search by year")
 
-    
+    elif  choice == '3':
+        print('== Books list ==')
+        print('title \t\t author \t year')
+        
+        if len(books) > 0:
+            for book in books:
+                row = book.title + '\t' + book.author + '\t' + str(book.year)
+                print(row)
+                #print(book.title + '\t' + book.author + '\t' + str(book.year))
+        input()
+
+
     elif  choice == '0':
         print('Are you sure? [Yes|No]')
         sure = input() # sure => 'Y'

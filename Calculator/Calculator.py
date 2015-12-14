@@ -42,7 +42,6 @@ while choice != '0':
             x = int(x)
         
     y = None 
-   c
     print("Choose operator: ")
     print("0) exit")
     print("1) +")

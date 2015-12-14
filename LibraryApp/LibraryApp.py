@@ -16,7 +16,7 @@ def convertable_to_int(a):
 
 
 choice = None
-
+add = None
 while choice != '0':
     print("== Library ==")
     print("Choose Action :")
@@ -32,7 +32,6 @@ while choice != '0':
 
     if choice == '1':
         more_book = None
-        
         while more_book != 'no':
             print("== New book ==")
             while title == '':
@@ -58,15 +57,18 @@ while choice != '0':
 
             books.append(newBook)
         
-            print("Do you want to add one more book? [Yes|No]")
+            print("Do you want to add one more book? [Yes|No]") 
             more_book = input()
             more_book = more_book.lower()
+            more_book = more_book.strip()
             if more_book == 'no' or more_book == 'n':
-                more_book = 'no'
-                
+                 more_book = 'no'
             title = ''
             author = ''
             year = None
+        choice = '-1'
+             
+
 
     elif choice == '2': 
          print("== Show book ==")

@@ -22,7 +22,7 @@ while choice != '0':
     print("Choose Action :")
     print("0) Exit")
     print("1) Add new book")
-    print("2) Show book")
+    print("2) Find book")
     print("3) Books")
 
     choice = input()
@@ -71,7 +71,7 @@ while choice != '0':
 
 
     elif choice == '2': 
-         print("== Show book ==")
+         print("== Find book ==")
          print("Choose Action :")
          print("0) Exit")
          print("1) Search by author")

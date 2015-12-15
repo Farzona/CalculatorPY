@@ -73,10 +73,19 @@ while choice != '0':
     elif choice == '2': 
          print("== Find book ==")
          print("Choose Action :")
-         print("0) Exit")
+         print("0) Back to main menu")
          print("1) Search by author")
          print("2) Search by title")
          print("3) Search by year")
+
+         choice = input()
+         choice = None 
+
+         if choice == '0':
+             print('Are you sure? [Yes|No]')
+             sure = input() # sure => 'Y'
+         
+         sure = None
 
     elif  choice == '3':
         print('== Books list ==')

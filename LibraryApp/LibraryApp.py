@@ -82,10 +82,14 @@ while choice != '0':
          choice = None 
 
          if choice == '0':
-             print('Are you sure? [Yes|No]')
-             sure = input() # sure => 'Y'
+             sure = input() 
+             sure = None
          
-         sure = None
+         if choice == '1':
+             print('Enter the title of book')
+             input()
+            
+
 
     elif  choice == '3':
         print('== Books list ==')

@@ -67,28 +67,29 @@ while choice != '0':
             title = ''
             author = ''
             year = None
-             
 
+    elif choice == '2':
+        search = None 
+        while search != 'no':
+            print("== Find book ==")
+            print("Choose Action :")
+            print("0) Back to main menu")
+            print("1) Search by author")
+            print("2) Search by title")
+            print("3) Search by year")
 
-    elif choice == '2': 
-         print("== Find book ==")
-         print("Choose Action :")
-         print("0) Back to main menu")
-         print("1) Search by author")
-         print("2) Search by title")
-         print("3) Search by year")
+            search_choice = input()
 
-         choice = input()
-         choice = None 
-
-         if choice == '0':
-             sure = input() 
-             sure = None
+            if search_choice == '0':
+                search = 'no'
          
-         if choice == '1':
-             print('Enter the title of book')
-             input()
-            
+            if search_choice == '1':
+                print('Enter the author of book: ')
+                author = input()
+
+                for book in books:
+                    if book.author == author:
+                        print('Nashli')
 
 
     elif  choice == '3':

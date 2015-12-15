@@ -92,6 +92,23 @@ while choice != '0':
                         print('Nashli')
 
 
+            if search_choice == '2':
+                print('Enter the title of book: ')
+                title = input()
+
+                for book in books:
+                    if book.title == title:
+                        print('Nashli')
+
+
+            if search_choice == '3':
+                print('Enter the year of book: ')
+                year = input()
+
+                for book in books:
+                    if book.year == year:
+                        print('Nashli')
+
     elif  choice == '3':
         print('== Books list ==')
         print('title \t\t author \t year')

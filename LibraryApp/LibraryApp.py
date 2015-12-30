@@ -87,22 +87,25 @@ while choice != '0':
                 print('Enter the author of book: ')
                 author = input()
 
+                message = 'Book with such author was not found'
+
                 for book in books:
                     if book.author == author:
-                        print('Book was found')
-                    elif book.author != author:
-                        print('Book with such author was not found')
+                        message = 'Book was found'
+
+                print(message)
 
             if search_choice == '2':
                 print('Enter the title of book: ')
                 title = input()
 
+                message = 'Book with such title was not found'
+
                 for book in books:
                     if book.title == title:
-                        print('Book was found')
-                    elif book.title != title: 
-                        print('Book with such title was not found')
-
+                       message = 'Book was found'
+                    
+                print(message)
 
             if search_choice == '3':
                 print('Enter the year of book: ')
@@ -110,11 +113,13 @@ while choice != '0':
                 if convertable_to_int(year) == True:
                     year = int(year)
 
+                message = 'Book with such year was not found'
+
                 for book in books:
                     if book.year == year:
-                        print('Book was found')
-                    elif book.year != year:
-                        print('Book with such year was not found') 
+                        message = 'Book was found'
+                    
+                        print(message)
 
     elif  choice == '3':
         print('== Books list ==')

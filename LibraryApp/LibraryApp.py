@@ -107,6 +107,8 @@ while choice != '0':
             if search_choice == '3':
                 print('Enter the year of book: ')
                 year = input()
+                if convertable_to_int(year) == True:
+                    year = int(year)
 
                 for book in books:
                     if book.year == year:

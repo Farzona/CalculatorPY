@@ -100,7 +100,7 @@ while choice != '0':
                 for book in books:
                     if book.title == title:
                         print('We found out the book you re seaching')
-                    elif book.title != title:
+                    elif book.title != title: 
                         print('Book with such title  not found')
 
 

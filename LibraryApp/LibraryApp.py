@@ -90,7 +90,8 @@ while choice != '0':
                 for book in books:
                     if book.author == author:
                         print('Nashli')
-
+                    elif book.author != author:
+                        print('Book with such author not found')
 
             if search_choice == '2':
                 print('Enter the title of book: ')
@@ -98,7 +99,9 @@ while choice != '0':
 
                 for book in books:
                     if book.title == title:
-                        print('Nashli')
+                        print('We found out the book you re seaching')
+                    elif book.title != title:
+                        print('Book with such title  not found')
 
 
             if search_choice == '3':
@@ -108,6 +111,8 @@ while choice != '0':
                 for book in books:
                     if book.year == year:
                         print('Nashli')
+                    elif book.year != year:
+                        print('Book with such year not found') 
 
     elif  choice == '3':
         print('== Books list ==')

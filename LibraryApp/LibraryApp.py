@@ -16,8 +16,16 @@ def convertable_to_int(a):
 
 
 def prepare_year(year):
+    if len(year) != 4:
+        print('ERROR: incorrect year')
+        return None
+
     if convertable_to_int(year) == True:
         year = int(year)
+    else:
+        print('ERROR: incorrect year')
+        return None
+
     return year
 
 

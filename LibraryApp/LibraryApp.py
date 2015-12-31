@@ -57,7 +57,7 @@ while choice != '0':
             while author == '':
                print("Enter author:")
                author = input()
-               author  =  author.strip() 
+               author = author.strip() 
 
             while type (year).__name__ != 'int':
                 print("Enter year: ")

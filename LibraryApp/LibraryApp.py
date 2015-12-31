@@ -15,6 +15,12 @@ def convertable_to_int(a):
         return False
 
 
+def prepare_year(year):
+    if convertable_to_int(year) == True:
+        year = int(year)
+    return year
+
+
 choice = None
 add = None
 while choice != '0':
@@ -48,8 +54,7 @@ while choice != '0':
             while type (year).__name__ != 'int':
                 print("Enter year: ")
                 year = input()
-                if convertable_to_int(year) == True:
-                    year = int(year)
+                year = prepare_year(year)
 
             newBook = Book()
             newBook.author = author
@@ -109,9 +114,8 @@ while choice != '0':
 
             if search_choice == '3':
                 print('Enter the year of book: ')
-                year = input()
-                if convertable_to_int(year) == True:
-                    year = int(year)
+                year = input() 
+                year = prepare_year(year)
 
                 message = 'Book with such year was not found'
 

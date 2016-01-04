@@ -91,6 +91,7 @@ while choice != '0':
                 year = input()
                 year = prepare_year(year)
 
+
             newBook = Book()
             newBook.author = author
             newBook.title = title

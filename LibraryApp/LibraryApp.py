@@ -1,3 +1,6 @@
+import re
+
+
 class Book:
      title = None
      author = None
@@ -29,6 +32,18 @@ def prepare_year(year):
     return year
 
 
+def prepare_author(author):
+    result = ''
+
+    author = author.strip()
+
+    template = '[a-zA-Z]+'
+    if re.fullmatch(template, author) != None:
+        result = author
+
+    return result
+
+
 choice = None
 add = None
 while choice != '0':
@@ -57,7 +72,7 @@ while choice != '0':
             while author == '':
                print("Enter author:")
                author = input()
-               author = author.strip() 
+               author = prepare_author(author)
 
             while type (year).__name__ != 'int':
                 print("Enter year: ")

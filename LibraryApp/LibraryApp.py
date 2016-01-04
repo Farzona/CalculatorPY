@@ -44,6 +44,18 @@ def prepare_author(author):
     return result
 
 
+def prepare_title(title):
+    result = ''
+
+    title = title.strip()
+
+    template = '[a-zA-Z]+'
+    if re.fullmatch(template, title ) != None: 
+        result = title 
+
+    return result
+
+
 choice = None
 add = None
 while choice != '0':
@@ -67,7 +79,7 @@ while choice != '0':
             while title == '':
                 print("Enter title:")
                 title = input()
-                title = title.strip()
+                title = prepare_title(title)
 
             while author == '':
                print("Enter author:")

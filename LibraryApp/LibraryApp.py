@@ -177,10 +177,10 @@ while choice != '0':
     elif choice == '4':
         print('==Delete==')
         print('Choose action:')
-        print('0)Back to main menu')
-        print('1)Delete by title')
-        print('2)Delete by author')
-        print('3)Delete by year')
+        print('0) Back to main menu')
+        print('1) Delete by title')
+        print('2) Delete by author')
+        print('3) Delete by year')
 
 
 
@@ -189,7 +189,25 @@ while choice != '0':
         if delete_choice == '0':
             delete = 'no'
          
-        if delete_choice == '1':
+        elif delete_choice == '1':
+            print('Enter the title of book: ')
+            title = input()
+
+            for book in books:
+                if book.title == title:
+                    row = book.title + '\t' + book.author + '\t' + str(book.year)
+                    print("\ntitle \t\t author \t\t year")
+                    print(row)
+                    
+                    print('\nDo you want to delete this book? [Yes|No] ')
+                    delete_book = input()
+                    
+                    if delete_book == 'yes' or delete_book == 'y':
+                        books.remove(book)
+                        print('book was deleted')
+
+
+        elif delete_choice == '2':
             print('Enter the author of book: ')
             author = input()
 
@@ -205,18 +223,6 @@ while choice != '0':
                     if delete_book == 'yes' or delete_book == 'y':
                         books.remove(book)
                         print('book was deleted')
-
-        #if delete_choice == '2':
-        #    print('Enter the title of book: ')
-        #    title = input()
-
-        #    message = 'Book with such title was not found'
-
-        #    for book in books:
-        #        if book.title == title:
-        #            message = 'Book was found'
-                    
-        #    print(message)
 
         #if delete_choice == '3':
         #    print('Enter the year of book: ')

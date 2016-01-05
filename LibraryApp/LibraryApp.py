@@ -37,7 +37,7 @@ def prepare_author(author):
 
     author = author.strip()
 
-    template = '[a-zA-Z]+'
+    template = '[a-zA-Z ]+'
     if re.fullmatch(template, author) != None:
         result = author
 
@@ -49,7 +49,7 @@ def prepare_title(title):
 
     title = title.strip()
 
-    template = '[a-zA-Z]+'
+    template = '[a-zA-Z ]+'
     if re.fullmatch(template, title ) != None: 
         result = title 
 
@@ -65,6 +65,7 @@ while choice != '0':
     print("1) Add new book")
     print("2) Find book")
     print("3) Books")
+    print("4) Delete")
 
     choice = input()
 
@@ -162,8 +163,8 @@ while choice != '0':
                         print(message)
 
     elif  choice == '3':
-        print('== Books list ==')
-        print('title \t\t author \t year')
+        print("== Books list ==")
+        print("title \t\t author \t\t year")
         
         if len(books) > 0:
             for book in books:
@@ -172,7 +173,64 @@ while choice != '0':
                 #print(book.title + '\t' + book.author + '\t' + str(book.year))
         input()
 
+   
+    elif choice == '4':
+        print('==Delete==')
+        print('Choose action:')
+        print('0)Back to main menu')
+        print('1)Delete by title')
+        print('2)Delete by author')
+        print('3)Delete by year')
 
+
+
+        delete_choice = input()
+
+        if delete_choice == '0':
+            delete = 'no'
+         
+        if delete_choice == '1':
+            print('Enter the author of book: ')
+            author = input()
+
+            for book in books:
+                if book.author == author:
+                    row = book.title + '\t' + book.author + '\t' + str(book.year)
+                    print("\ntitle \t\t author \t\t year")
+                    print(row)
+                    
+                    print('\nDo you want to delete this book? [Yes|No] ')
+                    delete_book = input()
+                    
+                    if delete_book == 'yes' or delete_book == 'y':
+                        books.remove(book)
+                        print('book was deleted')
+
+        #if delete_choice == '2':
+        #    print('Enter the title of book: ')
+        #    title = input()
+
+        #    message = 'Book with such title was not found'
+
+        #    for book in books:
+        #        if book.title == title:
+        #            message = 'Book was found'
+                    
+        #    print(message)
+
+        #if delete_choice == '3':
+        #    print('Enter the year of book: ')
+        #    year = input() 
+        #    year = prepare_year(year)
+
+        #    message = 'Book with such year was not found'
+
+        #    for book in books:
+        #        if book.year == year:
+        #            message = 'Book was found'
+        #            print(message)
+
+           
     elif  choice == '0':
         print('Are you sure? [Yes|No]')
         sure = input() # sure => 'Y'

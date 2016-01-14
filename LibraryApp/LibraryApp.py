@@ -272,40 +272,38 @@ while choice != '0':
                     break;
 
 
-        elif delete_choice == '2':
+        elif update_choice == '2':
             print('Enter the author of book: ')
             author = input()
 
             for book in books:
                 if book.author == author:
-                    row = book.title + '\t' + book.author + '\t' + str(book.year)
-                    print("\ntitle \t\t author \t\t year")
-                    print(row)
-                    
-                    print('\nDo you want to delete this book? [Yes|No] ')
-                    delete_book = input()
-                    
-                    if delete_book == 'yes' or delete_book == 'y':
-                        books.remove(book)
-                        print('book was deleted')
+                   books.remove(book)
+                   print("Enter new author: ")
+                   author = input()
+                   book.author = prepare_author(author)
+                   books.append(book)
+                   row = book.title + '\t' + book.author + '\t' + str(book.year)
+                   print("\ntitle \t\t author \t\t year")
+                   print(row)
+                   break;
 
-        elif delete_choice == '3':
+        elif update_choice == '3':
             print('Enter the year of book: ')
             year = input()
             year = prepare_year(year)
-
             for book in books:
                 if book.year == year:
-                    row = book.title + '\t' + book.author + '\t' + str(book.year)
-                    print("\ntitle \t\t author \t\t year")
-                    print(row)
-                    
-                    print('\nDo you want to delete this book? [Yes|No] ')
-                    delete_book = input()
-                    
-                    if delete_book == 'yes' or delete_book == 'y':
                         books.remove(book)
-                        print('book was deleted')               
+
+                        print("Enter new year: ")
+                        year = input()
+                        book.year = prepare_year(year)
+                        books.append(book)
+                        row = book.title + '\t' + book.author + '\t' + str(book.year)
+                        print("\ntitle \t\t author \t\t year")
+                        print(row)
+                        break;     
                         
                         
                               

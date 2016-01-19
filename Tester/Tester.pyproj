@@ -44,6 +44,8 @@
     <Content Include="templates\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\img\" />
+    <Folder Include="static\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <PropertyGroup>

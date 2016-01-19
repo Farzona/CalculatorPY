@@ -8,14 +8,14 @@
 <body>
     <p>
         <b>
-            <h1>Тест на задания ПДД КР</h1>
+           <h1>Тест на задания ПДД КР</h1>
         </b>
     </p>
     <p>Поставьте галочки напротив ответа,который Вы считаете верным</p>
     <table class="question" border="1">
         <tr>
             <td class="list" width="50" rowspan="3">
-                <img width="100" height="100" src="img/1.png">
+                <img src="{{url_for('static',filename = '1.png' ) }}" width="100" height="100" >
             </td>
             <td class="list" width="325">
                 Проезд запрещен
@@ -44,7 +44,7 @@
     <table class="question" border="1">
         <tr>
             <td class="list" width="50" rowspan="3">
-                <img width="100" height="100" src="img/2.png">
+                <img src="{{url_for('static',filename = '2.png' ) }}" width="100" height="100">
             </td>
             <td class="list" width="325">
                 Остановка запрещена
@@ -73,7 +73,7 @@
     <table class="question" border="1">
         <tr>
             <td width="50" rowspan="3">
-                <img width="100" height="100" src="img/3.png">
+                <img src="{{url_for('static',filename = '3.png' ) }}" width="100" height="100">
             </td>
             <td width="330" class="list">
                 Ведется ремонтные работы
@@ -102,7 +102,7 @@
     <table class="question" border="1">
         <tr>
             <td width="50" rowspan="3">
-                <img width="100" height="100" src="img/4.jpg">
+                <img src="{{url_for('static',filename = '4.jpg' ) }}" width="100" height="100">
             </td>
             <td width="330" class="list">
                 Ведется ремонтные работы
@@ -131,7 +131,7 @@
     <table class="question" border="1">
         <tr>
             <td width="50" rowspan="3">
-                <img width="100" height="100" src="img/5.png">
+                <img src="{{url_for('static',filename = '5.png' ) }}" width="100" height="100">
             </td>
             <td width="330" class="list">
                 Дорогоа для трамвая,проезд запрещен

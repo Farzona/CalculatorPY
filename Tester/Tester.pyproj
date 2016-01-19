@@ -41,9 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\img\1.png" />
+    <Content Include="static\img\2.png" />
+    <Content Include="static\img\3.png" />
+    <Content Include="static\img\4.jpg" />
+    <Content Include="static\img\5.png" />
     <Content Include="templates\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\css\" />
     <Folder Include="static\img\" />
     <Folder Include="static\" />
     <Folder Include="templates\" />

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\css\main.css" />
     <Content Include="static\img\1.png" />
     <Content Include="static\img\2.png" />
     <Content Include="static\img\3.png" />

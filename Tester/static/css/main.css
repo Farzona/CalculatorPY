@@ -1,0 +1,9 @@
+﻿.question {
+    width: 500px;
+    border-bottom: 2px solid maroon;
+    background: #fffacd;
+
+}
+.list{
+    padding: 3px;
+    text-align: center;

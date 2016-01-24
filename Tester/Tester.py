@@ -6,7 +6,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/check")
+@app.route("/check", methods=['POST'])
 def check():
     return 'check'
 

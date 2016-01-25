@@ -47,6 +47,7 @@
     <Content Include="static\img\3.png" />
     <Content Include="static\img\4.jpg" />
     <Content Include="static\img\5.png" />
+    <Content Include="templates\check.html" />
     <Content Include="templates\index.html" />
   </ItemGroup>
   <ItemGroup>

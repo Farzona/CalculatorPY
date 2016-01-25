@@ -8,7 +8,7 @@ def index():
 
 @app.route("/check", methods=['POST'])
 def check():
-    return 'check'
+    return render_template("check.html")
 
 
 if __name__ == "__main__":

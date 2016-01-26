@@ -5,6 +5,11 @@ app = Flask(__name__,)
 def index():
     return render_template("index.html")
 
+def check_answer(answer, correct_answer):
+    if answer == correct_answer:
+        return 1
+    return 0
+
 
 @app.route("/check", methods=['POST'])
 def check():
@@ -12,24 +17,19 @@ def check():
 
     if request.form != None:
         question1 = request.form.get('question1')
-        if question1 == '1':
-            points = points + 1
+        points = points + check_answer(question1, '1')
         
         question2 = request.form.get('question2')
-        if question2 == '1':
-            points = points + 1
+        points = points + check_answer(question2, '1')
 
         question3 = request.form.get('question3')
-        if question3 == '1':
-            points = points + 1
+        points = points + check_answer(question3, '1')
         
         question4 = request.form.get('question4')
-        if question4 == '1':
-            points = points + 1
+        points = points + check_answer(question4, '1')
 
         question5 = request.form.get('question5')
-        if question5 == '2':
-            points = points + 1
+        points = points + check_answer(question5, '2')
     
     return render_template("check.html", result=points)
    

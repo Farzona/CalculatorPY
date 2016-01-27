@@ -1,10 +1,13 @@
+import json
 from flask import Flask, render_template, url_for, request
 app = Flask(__name__,)
-  
+
+
 @app.route("/")
 def index():
+    questions = json.load(open('questions.json', 'r', encoding='utf-8-sig'))
     return render_template("index.html")
-
+        
 def check_answer(answer, correct_answer):
     if answer == correct_answer:
         return 1
@@ -34,6 +37,7 @@ def check():
     return render_template("check.html", result=points)
    
 if __name__ == "__main__":
+    app.debug = True
     app.run(
         host="0.0.0.0",
         port=3333)

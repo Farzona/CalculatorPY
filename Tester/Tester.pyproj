@@ -40,6 +40,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="questions.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\css\main.css" />
     <Content Include="static\img\1.png" />

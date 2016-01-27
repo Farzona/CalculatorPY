@@ -6,7 +6,7 @@ app = Flask(__name__,)
 @app.route("/")
 def index():
     questions = json.load(open('questions.json', 'r', encoding='utf-8-sig'))
-    return render_template("index.html")
+    return render_template("index.html", questions=questions)
         
 def check_answer(answer, correct_answer):
     if answer == correct_answer:

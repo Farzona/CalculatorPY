@@ -12,17 +12,33 @@
         </b>
     </p>
     <p>Поставьте галочки напротив ответа,который Вы считаете верным</p>
-        <ul>
-            {% for q in questions %}
-                <li>
-                    Вопрос: {{ q.question }}<br>
-                    Правильный ответ: {{ q.correct_answer }}
-                    Картинка: <img src="static/{{ q.image }}"/>
-                </li>
-             {% endfor %}
-       </ul>
-    
-    
-    <p><input type="submit"></p>
+    <form action="/check" method="post">
+        {% for q in questions %}
+            {% set question_index = loop.index %}
+            <table class="question" border="1">
+                <tr>
+                    <td class="list" width="50">
+                        <img width="100" height="100" src="/static/{{ q.image }}">
+                    </td>
+                    <td>
+                        <table  border="1">
+                         {% for a in q.answers %}
+                            <tr>
+                                <td class="list" width="325">
+                                   {{ a }}
+                                </td>
+                                <td class="list">
+                                    <input type="radio" name="question{{ question_index }}" value="{{ loop.index }}">
+                                </td>
+                            </tr>
+                           {% endfor %}
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        {% endfor %}
+
+        <p><input type="submit"></p>
+    </form>
 </body>
 </html>
